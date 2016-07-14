@@ -2,7 +2,7 @@
 %macro asympn(endpoint="normal", alpha=0.025, power=0.8, narms=5,
 				delta=0, tstd=12, tacr=4);
 data contrastn; set dinput;
-keep endpoint narms alpha power totalsamplesize;
+	keep endpoint narms alpha power totalsamplesize;
 array u{&narms}; array s{&narms}; array f{&narms}; array c{&narms}; 
 endpoint=&endpoint; delta=&delta; alpha=&alpha; power=&power; narms=&narms;
 epi = 0; s0 = 0;
